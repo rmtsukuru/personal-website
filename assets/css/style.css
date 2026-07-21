@@ -1,0 +1,179 @@
+body {
+    margin: 0;
+    background-color: #ffddee;
+    height: 100%;
+    /* Maybe change this font later...? We'll see */
+    font-family: cursive, Calibiri, sans-serif;
+    /* We'll try this for now */
+    font-family: Helvetica, Arial;
+}
+
+header {
+    min-height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: lavender;
+}
+
+header section.title {
+    padding-left: 15px;
+}
+
+header nav.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+header nav.menu > ul {
+    display: flex;
+    flex-direction: row;
+    min-width: 400px;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 30px;
+    padding: 0;
+}
+
+header nav.menu ul {
+    list-style-type: none;
+    font-family: Consolas, monospace;
+}
+
+header nav.menu > ul > li {
+    position: relative;
+    transition: background-color 0.8s;
+    padding: 10px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+header nav.menu > ul > li:hover {
+    background-color: #d6d6ea;
+}
+
+header nav.menu > ul > li > a {
+    transition: all 0.8s linear;
+}
+
+header nav.menu ul li a {
+    text-decoration: none;
+    color: #530093;
+}
+
+header nav.menu ul li a:hover {
+    text-decoration: underline;
+}
+
+header nav.menu > ul > li:has(> .icon) {
+    padding-right: 25px;
+}
+
+header nav.menu > ul > li > .icon {
+    position: absolute;
+    display: block;
+    transform: rotate(-45deg);
+    top: calc(50% - 7px);
+    right: 5px;
+    width: 12px;
+}
+
+header nav.menu > ul > li > .icon::before,
+header nav.menu > ul > li > .icon::after {
+    content: "";
+    display: block;
+    background-color: white;
+    transition: all 0.7px linear;
+}
+
+header nav.menu > ul > li > .icon::before {
+    height: 7px;
+    width: 2px;
+}
+
+header nav.menu > ul > li > .icon::after {
+    height: 2px;
+    width: 10px;
+}
+
+header nav.menu > ul > li:hover > .icon::before {
+    height: 2px;
+    width: 10px;
+    position: absolute;
+    left: -6px;
+}
+
+header nav.menu > ul > li:hover > .icon::after {
+    height: 10px;
+    width: 2px;
+    position: absolute;
+    right: 8px;
+}
+
+header nav.menu .sub-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: calc(50% + 25px);
+    right: 0;
+    background-color: #ffffe2;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+header nav.menu > ul > li:hover > .sub-menu {
+    display: flex;
+    flex-direction: column;
+}
+
+header nav.menu .sub-menu::before {
+    content: "";
+    height: 20px;
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+}
+
+header nav.menu .sub-menu::after {
+    content: "";
+    border: 8px solid transparent;
+    border-bottom-color: #ffffe2;
+    position: absolute;
+    bottom: 100%;
+    right: 15px;
+}
+
+header nav.menu .sub-menu li {
+    padding: 7px 0;
+}
+
+main {
+    min-height: calc(100vh - 500px);
+    padding: 0 10px;
+    max-width: 1200px;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    min-height: 100px;
+    bottom: 0;
+    background-color: #026;
+    color: white;
+}
+
+footer section.main {
+    background-color: #dd00ff;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer section.nav {
+    padding: 5px 10px;
+    text-align: center;
+}
+
