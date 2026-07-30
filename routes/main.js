@@ -1,6 +1,9 @@
 import express from "express";
+import courseRouter from "./courses.js";
 
 const router = express.Router();
+
+router.use("/courses", courseRouter);
 
 router.get("/", (req, res) => {
   const data = {
@@ -16,14 +19,6 @@ router.get("/about", (req, res) => {
     title: "About - Samantha Randolph",
   };
   res.render('about', data);
-});
-
-router.get("/courses", (req, res) => {
-  const data = {
-    ...req.data,
-    title: "Courses - Samantha Randolph",
-  };
-  res.render('courses', data);
 });
 
 export default router;

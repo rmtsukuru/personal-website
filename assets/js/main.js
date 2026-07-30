@@ -1,5 +1,8 @@
 const button = document.getElementById("clickBtn");
 
-button.onclick = function() {
-  alert("You clicked the button!");
-};
+if (button) {
+  button.onclick = function() {
+    alert("You clicked the button!");
+  };
+}
+
