@@ -27,8 +27,6 @@ function injectGlobals(req, res, next) {
 app.use(injectGlobals);
 
 app.get("/", (req, res) => {
-  // TODO: add a globals middleware or something to add in year/menu data 
-  // on every page automatically
   const data = {
     ...req.data,
     title: "Samantha Randolph",
