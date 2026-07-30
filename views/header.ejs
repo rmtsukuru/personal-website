@@ -31,8 +31,9 @@
             <span class="icon"></span>
             <ul class="sub-menu">
                 <li><a href="/courses">Overview</a></li>
-                <li><a href="/coding">Computer Science</a></li>
-                <li><a href="/english">English</a></li>
+                <% courses.forEach(course => { %>
+                  <li><a href="/courses/<%- course.path %>"><%- course.name %></a></li>
+                <% }); %>
             </ul>
           </li>
           <li><a href="/about">About</a></li>

@@ -1,0 +1,14 @@
+<%- include("header"); -%>
+
+<h1>Courses</h1>
+
+<section>
+  <ul>
+    <% courses.forEach(course => { %>
+      <li><a href="/courses/<%- course.path %>"><%- course.name %></a></li>
+    <% }); %>
+  </ul>
+</section>
+
+<%- include("footer"); -%>
+
