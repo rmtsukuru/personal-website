@@ -5,13 +5,13 @@ const courseContent = {
 };
 
 function loadCourseContent() {
-  fs.readFile("courses/coding.md", "utf8", (err, data) => {
-    if (err) {
-      console.error("Error reading file:", err);
-      return;
-    }
+  try {
+    const data = fs.readFileSync("courses/coding.md", "utf8");
     courseContent.markdown = data;
-  });
+  } catch(err) {
+    console.error("Error reading file:", err);
+    return;
+  }
 }
 
 export {

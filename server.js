@@ -16,7 +16,6 @@ app.use(express.static('assets'));
 app.use(injectGlobals);
 app.use(router);
 
-// TODO switch this to use async/await before starting server maybe?
 loadCourseContent();
 
 app.listen(PORT, () => {
