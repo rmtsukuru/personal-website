@@ -9,6 +9,7 @@ function injectGlobals(req, res, next) {
   req.data = {
     year,
     courses,
+    stylesheets: [],
   };
   next();
 }

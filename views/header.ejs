@@ -5,6 +5,9 @@
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
     <meta content="utf-8" http-equiv="encoding" />
     <link href="/css/style.css" media="all" rel="stylesheet" type="text/css" />
+    <% stylesheets.forEach(css => { %>
+      <link href="/css/<%- css %>.css" media="all" rel="stylesheet" type="text/css" />
+    <% }); %>
   </head>
   <body>
     <header>
@@ -36,7 +39,14 @@
                 <% }); %>
             </ul>
           </li>
-          <li><a href="/about">About</a></li>
+          <li>
+            <a href="/about">About</a>
+            <span class="icon"></span>
+            <ul class="sub-menu">
+              <a href="/about">Bio</a>
+              <a href="/resume">CV</a>
+            </ul>
+          </li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </nav>
