@@ -19,10 +19,34 @@ main h1 {
     color: #ef60ef;
 }
 
+.red {
+    color: #e14f4f;
+}
+
+.purple {
+    color: #aa00ff;
+}
+
+.blue {
+    color: cornflowerblue;
+}
+
+.green {
+    color: #6eba81;
+}
+
+.yellow {
+    color: #b19a3e;
+}
+
+.turquoise {
+    color: #2fd5a8;
+}
+
 .sidebar {
     background-color: #ffc0d0;
     padding: 30px;
-    max-width: 300px;
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,11 +59,23 @@ main h1 {
 }
 
 .sidebar .photo-section img {
+    max-width: 150px;
     height: 100%;
 }
 
 .sidebar section {
     width: 100%;
+}
+
+.sidebar .skills ul {
+    margin: 30px 0 20px;
+}
+
+.sidebar .skills li {
+    list-style-type: none;
+    margin-bottom: 15px;
+    text-align: right;
+    font-family: 'Montserrat', system-ui, sans-serif;
 }
 
 .sidebar h1 {
@@ -51,7 +87,7 @@ main h1 {
     font-size: 15px;
     font-weight: lighter;
     text-align: right;
-    padding: 0 18px;
+    padding-right: 4px;
 }
 
 .cv-content {
@@ -88,6 +124,21 @@ main h1 {
 
 .cv-content section h1 {
     text-align: left;
+}
+
+.cv-content section h2 {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+.cv-content section h3 {
+    font-size: 16px;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.cv-content section p {
+    margin-top: 0;
 }
 
 footer {

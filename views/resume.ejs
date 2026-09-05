@@ -6,20 +6,28 @@
   </figure>
   <section class="skills">
     <h1>Skills</h1>
+    <ul>
+        <li class="red">Teaching &amp; Mentoring</li>
+        <li class="purple">Academic &amp; Creative Writing</li>
+        <li class="blue">Political Advocacy</li>
+        <li class="pink">Public Speaking</li>
+        <li class="green">Research &amp; Analysis</li>
+        <li class="yellow">Event Facilitation</li>
+    </ul>
   </section>
   <section class="about">
     <h1>About Me</h1>
     <p>
         Hi there, my name’s Sam!<br />
-        I’m a <%= age %>-year-old queer girl with ADHD living and working in 
-        San Francisco. I used to work full-time in the tech industry, but then 
-        I went back to school to become a feminist political educator and writer 
-        while working part-time in teaching, organizing, and library roles. I 
-        like doing work that aligns with my lesbian identity, socialist feminist 
-        politics, and people skills. I also provide freelance tutoring in coding 
-        and language skills for adult learners, teens, and children ages 6 and up; 
-        feel free to get in touch if you or your child are interested in working 
-        with me.
+        I’m a <%= age %>-year-old queer girl with<br /> 
+        ADHD living and working in San Francisco. I used to work full-time in the 
+        tech industry, but then I went back to school to become a feminist 
+        political educator and writer while working part-time in teaching, 
+        organizing, and library roles. I like doing work that aligns with my 
+        lesbian identity, socialist feminist politics, and people skills. I also 
+        provide freelance tutoring in coding and language skills for adult 
+        learners, teens, and children ages 6 and up; feel free to get in touch if
+        you or your child are interested in working with me.
     </p>
   </section>
 </aside>
@@ -41,6 +49,15 @@
   <span></span>
   <section class="work-experience">
     <h1>Work Experience</h1>
+    <% jobs.forEach(job => { %>
+      <div class="job">
+        <h2 class="<%- job.color %>">
+          <%- job.position %> <span>(<%- job.time %>)</span>
+        </h2>
+        <h3><%- job.employer %></h3>
+        <p><%- job.description %></p>
+      </div>
+    <% }); %>
   </section>
 </article>
 
