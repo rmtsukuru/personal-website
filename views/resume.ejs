@@ -44,6 +44,16 @@
   <div class="flower">&#x1F338;</div>
   <section class="education">
     <h1>Education</h1>
+    <% institutions.forEach(institution => { %>
+      <div class="institution">
+        <h2 class="<%- institution.color %>">
+          <%- institution.name %> <span>(<%- institution.time %>)</span>
+        </h2>
+        <% institution.credentials.forEach(credential => { %>
+          <p><%- credential.title %> (<%- credential.year %>)</p>
+        <% }); %>
+      </div>
+    <% }); %>
   </section>
   <div class="flower">&#x1F33A;</div>
   <span></span>

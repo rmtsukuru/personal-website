@@ -1,6 +1,16 @@
 
 const education = [
-  {},
+  {
+    name: "City College of San Francisco",
+    color: "pink",
+    time: "2023 - 2025",
+    credentials: [
+      { title: "AA in Women's and Gender Studies", year: "2025" },
+      { title: "AA in English", year: "2025" },
+      { title: "Creative Writing Certificate", year: "2025" },
+      { title: "Sexual Health Educator Certificate", year: "2024" },
+    ],
+  },
 ];
 
 const workExperience = [

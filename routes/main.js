@@ -2,7 +2,7 @@ import express from "express";
 
 import courseRouter from "./courses.js";
 import { calculateAge } from "../util/date.js";
-import { workExperience } from "../util/cv_data.js";
+import { education, workExperience } from "../util/cv_data.js";
 
 const router = express.Router();
 
@@ -31,6 +31,7 @@ router.get("/resume", (req, res) => {
     title: "CV - Samantha Randolph",
     stylesheets: ["resume"],
     age,
+    institutions: education,
     jobs: workExperience,
   };
   res.render("resume", data);
