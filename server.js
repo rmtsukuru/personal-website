@@ -8,7 +8,6 @@ const PORT = 8000;
 
 const app = express();
 
-
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
