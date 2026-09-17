@@ -34,7 +34,7 @@
 <article class="cv-content">
   <header>
     <h1 class="cv-title pink">Samantha Randolph</h1>
-    <span class="pronouns">she/her</span>
+    <span class="pronouns">she/her - ☉ Leo  ☽ Pisces  ↑ Virgo</span>
     <p class="contact">
       <a class="pink" href="mailto:samantha.randolph.pro@gmail.com">
         samantha.randolph.pro@gmail.com
@@ -58,13 +58,18 @@
   <div class="flower">&#x1F33A;</div>
   <span></span>
   <section class="work-experience">
-    <h1>Work Experience</h1>
+    <h1>Work/Volunteer Experience</h1>
     <% jobs.forEach(job => { %>
       <div class="job">
         <h2 class="<%- job.color %>">
           <%- job.position %> <span>(<%- job.time %>)</span>
         </h2>
-        <h3><%- job.employer %></h3>
+        <h3>
+          <%- job.employer %>
+          <% if (job.employer2) { %>
+          <span>and</span> <%- job.employer2 %>
+          <% } %>
+        </h3>
         <p><%- job.description %></p>
       </div>
     <% }); %>

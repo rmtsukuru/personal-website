@@ -16,6 +16,10 @@ main h1 {
     color: #4e4e4e;
 }
 
+.pronouns {
+    color: #7c7c7c;
+}
+
 .pink {
     color: #ef60ef;
 }
@@ -42,6 +46,18 @@ main h1 {
 
 .turquoise {
     color: #2fd5a8;
+}
+
+.teal {
+    color: #2ab1d0;
+}
+
+.cyan {
+    color: cyan;
+}
+
+.magenta {
+    color: #c312bc;
 }
 
 .sidebar {
@@ -137,6 +153,14 @@ main h1 {
     margin-bottom: 15px;
     margin-top: 0;
     color: #7c7c7c;
+}
+
+.cv-content section h3 span {
+    font-weight: normal;
+}
+
+.cv-content section h3 i {
+    color: #84639c;
 }
 
 .cv-content section p {
