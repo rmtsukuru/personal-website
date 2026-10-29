@@ -1,12 +1,14 @@
 import express from "express";
 
 import courseRouter from "./courses.js";
+import writingRouter from "./writing.js";
 import { calculateAge } from "../util/date.js";
 import { education, workExperience } from "../util/cv_data.js";
 
 const router = express.Router();
 
 router.use("/courses", courseRouter);
+router.use("/writing", writingRouter);
 
 router.get("/", (req, res) => {
   const data = {
