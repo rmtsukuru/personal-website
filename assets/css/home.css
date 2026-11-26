@@ -1,0 +1,10 @@
+
+.welcome-image {
+    float: right;
+}
+
+.welcome-image .photo-section img {
+    max-width: 300px;
+    height: 100%;
+}
+

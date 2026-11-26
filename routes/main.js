@@ -14,8 +14,9 @@ router.get("/", (req, res) => {
   const data = {
     ...req.data,
     title: "Samantha Randolph",
+    stylesheets: ["home"],
   };
-  res.render('index', data);
+  res.render("index", data);
 });
 
 router.get("/about", (req, res) => {
@@ -23,7 +24,15 @@ router.get("/about", (req, res) => {
     ...req.data,
     title: "About - Samantha Randolph",
   };
-  res.render('about', data);
+  res.render("about", data);
+});
+
+router.get("/test-js", (req, res) => {
+  const data = {
+    ...req.data,
+    title: "Test JavaScript",
+  };
+  res.render("test_js", data);
 });
 
 router.get("/resume", (req, res) => {
